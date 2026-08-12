@@ -1,0 +1,56 @@
+[
+  {
+    "id": "apple",
+    "name": "Apple",
+    "logo": "images/brands/apple.svg",
+    "models": 0
+  },
+  {
+    "id": "samsung",
+    "name": "Samsung",
+    "logo": "images/brands/samsung.svg",
+    "models": 0
+  },
+  {
+    "id": "xiaomi",
+    "name": "Xiaomi",
+    "logo": "images/brands/xiaomi.svg",
+    "models": 0
+  },
+  {
+    "id": "vivo",
+    "name": "Vivo",
+    "logo": "images/brands/vivo.svg",
+    "models": 0
+  },
+  {
+    "id": "infinix",
+    "name": "Infinix",
+    "logo": "images/brands/infinix.svg",
+    "models": 0
+  },
+  {
+    "id": "realme",
+    "name": "Realme",
+    "logo": "images/brands/realme.svg",
+    "models": 0
+  },
+  {
+    "id": "oneplus",
+    "name": "OnePlus",
+    "logo": "images/brands/oneplus.svg",
+    "models": 0
+  },
+  {
+    "id": "poco",
+    "name": "POCO",
+    "logo": "images/brands/poco.svg",
+    "models": 0
+  },
+  {
+    "id": "nothing",
+    "name": "Nothing",
+    "logo": "images/brands/nothing.svg",
+    "models": 0
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "smartphones",
+    "name": "Smartphones",
+    "image": "images/categories/smartphones.webp"
+  },
+  {
+    "id": "chargers",
+    "name": "Chargers",
+    "image": "images/categories/chargers.webp"
+  },
+  {
+    "id": "cables",
+    "name": "Cables",
+    "image": "images/categories/cables.webp"
+  },
+  {
+    "id": "cases",
+    "name": "Cases",
+    "image": "images/categories/cases.webp"
+  },
+  {
+    "id": "screen-protectors",
+    "name": "Screen Protectors",
+    "image": "images/categories/screen-protectors.webp"
+  },
+  {
+    "id": "audio",
+    "name": "Audio",
+    "image": "images/categories/audio.webp"
+  },
+  {
+    "id": "power-banks",
+    "name": "Power Banks",
+    "image": "images/categories/power-banks.webp"
+  },
+  {
+    "id": "smartwatches",
+    "name": "Smartwatches",
+    "image": "images/categories/smartwatches.webp"
+  }
+]

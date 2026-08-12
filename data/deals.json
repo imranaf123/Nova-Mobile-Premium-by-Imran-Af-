@@ -1,0 +1,38 @@
+[
+  {
+    "productId": "iphone-15-pro-max",
+    "title": "Titanium Week",
+    "discount": 10,
+    "featured": true
+  },
+  {
+    "productId": "samsung-s24-ultra",
+    "title": "Flagship Deal",
+    "discount": 10,
+    "featured": true
+  },
+  {
+    "productId": "vivo-x100",
+    "title": "Deal of the Day",
+    "discount": 15,
+    "featured": true
+  },
+  {
+    "productId": "infinix-note-40-pro",
+    "title": "Hot Price",
+    "discount": 12,
+    "featured": true
+  },
+  {
+    "productId": "xiaomi-14",
+    "title": "Leica Special",
+    "discount": 8,
+    "featured": false
+  },
+  {
+    "productId": "iphone-15",
+    "title": "iPhone Offer",
+    "discount": 9,
+    "featured": false
+  }
+]

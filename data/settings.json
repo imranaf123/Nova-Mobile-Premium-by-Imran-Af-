@@ -1,0 +1,88 @@
+{
+  "storeName": "Nova Mobile",
+  "tagline": "Pakistan's premium smartphone store",
+  "logo": "images/logo/logo.png",
+  "whatsapp": "",
+  "phone": "923133801788",
+  "email": "",
+  "address": "",
+  "city": "",
+  "currency": "PKR",
+  "currencySymbol": "PKR",
+  "openingHours": "",
+  "social": {
+    "facebook": "",
+    "instagram": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "trust": [
+    {
+      "id": "authentic",
+      "title": "100% Authentic",
+      "text": "Official products with warranty"
+    },
+    {
+      "id": "price",
+      "title": "Best Price Guarantee",
+      "text": "We match the best prices"
+    },
+    {
+      "id": "return",
+      "title": "7 Days Return",
+      "text": "Hassle free return policy"
+    },
+    {
+      "id": "delivery",
+      "title": "Express Delivery",
+      "text": "Fast delivery across Pakistan"
+    },
+    {
+      "id": "secure",
+      "title": "Secure Shopping",
+      "text": "Your data is always safe"
+    }
+  ],
+  "hero": [
+    {
+      "id": "hero-1",
+      "productId": "iphone-15-pro-max",
+      "eyebrow": "iPhone 15 Pro Max",
+      "title": "Titanium.",
+      "subtitle": "So strong. So light.",
+      "text": "The most powerful iPhone ever. Built with titanium. Designed for the future.",
+      "image": "images/hero/hero-1.webp",
+      "align": "left"
+    },
+    {
+      "id": "hero-2",
+      "productId": "samsung-s24-ultra",
+      "eyebrow": "Galaxy S24 Ultra",
+      "title": "Galaxy AI.",
+      "subtitle": "Epic, in every way.",
+      "text": "200 MP camera, built-in S Pen, and titanium frame. The most powerful Galaxy yet.",
+      "image": "images/hero/hero-2.webp",
+      "align": "left"
+    },
+    {
+      "id": "hero-3",
+      "productId": "xiaomi-14",
+      "eyebrow": "Xiaomi 14",
+      "title": "Leica Summilux.",
+      "subtitle": "Light, mastered.",
+      "text": "Flagship Snapdragon power with a Leica optical system in a compact titanium body.",
+      "image": "images/hero/hero-3.webp",
+      "align": "left"
+    },
+    {
+      "id": "hero-4",
+      "productId": "vivo-x100",
+      "eyebrow": "Vivo X100",
+      "title": "Zeiss portrait.",
+      "subtitle": "Night, rewritten.",
+      "text": "Dimensity 9300 and a Zeiss camera system built for portraits after dark.",
+      "image": "images/hero/hero-4.webp",
+      "align": "left"
+    }
+  ]
+}
