@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nova Mobile — premium smartphones and accessories in Pakistan. Apple, Samsung, Xiaomi, Vivo, Infinix, Realme, OnePlus and more.">
+  <meta name="theme-color" content="#07080d">
+  <title>Nova Mobile — Premium Smartphones in Pakistan</title>
+  <link rel="icon" type="image/png" href="icons/favicon.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <button class="icon-btn menu-btn" id="menu-btn" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+
+      <a class="logo" href="index.html" data-nav="home" aria-label="Nova Mobile home">
+        <img src="images/logo/logo.png" alt="" width="36" height="36">
+        <span class="logo-text">
+          <strong>NOVA</strong>
+          <small>MOBILE</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary">
+        <a href="index.html?view=shop" data-nav="shop">Shop</a>
+        <a href="index.html?view=shop" data-nav="phones">Phones</a>
+        <a href="index.html?view=accessories" data-nav="accessories">Accessories</a>
+        <a href="index.html?view=brands" data-nav="brands">Brands</a>
+        <a href="index.html?view=deals" data-nav="deals">Deals</a>
+        <a href="index.html?view=compare" data-nav="compare">Compare</a>
+        <a href="index.html?view=find" data-nav="find">Find Your Phone</a>
+      </nav>
+
+      <form class="header-search" id="header-search" role="search">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+        <input type="search" id="search-input" placeholder="Search phones, brands..." autocomplete="off">
+        <div class="search-results" id="search-results" hidden></div>
+      </form>
+
+      <div class="header-actions">
+        <a class="icon-btn" href="index.html?view=wishlist" data-nav="wishlist" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.4-9.2-8.2C1 9.2 2.2 6 5.4 6c1.8 0 3.1 1 3.8 2.2C10 7 11.3 6 13.1 6c3.2 0 4.4 3.2 2.6 5.8C13.5 15.6 12 20 12 20z"/></svg>
+          <span class="count-badge" id="wishlist-count" hidden>0</span>
+        </a>
+        <button class="icon-btn" id="cart-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 7h15l-1.5 9h-12z"/><path d="M6 7L5 4H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg>
+          <span class="count-badge" id="cart-count" hidden>0</span>
+        </button>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch theme">
+          <span class="theme-icon light-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M3 12h2M19 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+          </span>
+          <span class="theme-label" id="theme-label">Light</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HOME -->
+    <section class="view" id="view-home">
+      <div class="hero" id="hero">
+        <div class="hero-slides" id="hero-slides"></div>
+        <button class="hero-nav prev" id="hero-prev" aria-label="Previous slide">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
+        </button>
+        <button class="hero-nav next" id="hero-next" aria-label="Next slide">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+        <div class="hero-dots" id="hero-dots"></div>
+      </div>
+
+      <div class="strip-wrap">
+        <div class="product-strip" id="home-strip"></div>
+      </div>
+
+      <section class="section" id="brands-section">
+        <div class="section-head">
+          <h2>Shop by Brand</h2>
+          <a href="index.html?view=brands" class="text-link">See all brands</a>
+        </div>
+        <div class="brand-row" id="brand-row"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2>Trending Smartphones</h2>
+            <div class="tabs" id="trending-tabs">
+              <button class="tab active" data-tab="featured">Featured</button>
+              <button class="tab" data-tab="newArrival">New Arrivals</button>
+              <button class="tab" data-tab="bestSeller">Best Sellers</button>
+            </div>
+          </div>
+          <a href="index.html?view=shop" class="text-link">View all</a>
+        </div>
+        <div class="product-grid" id="trending-grid"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Deals</h2>
+          <a href="index.html?view=deals" class="text-link">All deals</a>
+        </div>
+        <div class="product-grid" id="home-deals"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Accessories</h2>
+          <a href="index.html?view=accessories" class="text-link">Shop accessories</a>
+        </div>
+        <div class="product-grid accessories-grid" id="home-accessories"></div>
+      </section>
+
+      <section class="find-teaser section">
+        <div class="find-teaser-card">
+          <div>
+            <p class="eyebrow">Not sure what to buy?</p>
+            <h2>Find Your Phone</h2>
+            <p>Answer a few questions about budget, brand and how you use your phone. We’ll shortlist matches from the live catalog.</p>
+            <a class="btn btn-primary" href="index.html?view=find">Start matching</a>
+          </div>
+          <div class="find-visual" aria-hidden="true">
+            <span>Budget</span>
+            <span>Camera</span>
+            <span>Gaming</span>
+            <span>Battery</span>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- SHOP / PHONES -->
+    <section class="view" id="view-shop" hidden>
+      <div class="page-hero">
+        <h1 id="shop-title">Smartphones</h1>
+        <p id="shop-subtitle">Browse the Nova Mobile catalog.</p>
+      </div>
+      <div class="catalog-layout">
+        <aside class="filters" id="shop-filters">
+          <h3>Filters</h3>
+          <label>Brand
+            <select id="filter-brand"><option value="">All brands</option></select>
+          </label>
+          <label>Availability
+            <select id="filter-stock">
+              <option value="">Any</option>
+              <option value="In Stock">In Stock</option>
+            </select>
+          </label>
+          <label>Max price (PKR)
+            <input type="number" id="filter-price" min="0" step="1000" placeholder="No limit">
+          </label>
+          <label>Sort
+            <select id="filter-sort">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="discount">Biggest discount</option>
+              <option value="name">Name</option>
+            </select>
+          </label>
+          <button class="btn btn-ghost" id="clear-filters">Clear filters</button>
+        </aside>
+        <div>
+          <p class="result-meta" id="shop-meta"></p>
+          <div class="product-grid" id="shop-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCESSORIES -->
+    <section class="view" id="view-accessories" hidden>
+      <div class="page-hero">
+        <h1>Accessories</h1>
+        <p>Chargers, cases, audio and more.</p>
+      </div>
+      <div class="chip-row" id="acc-chips"></div>
+      <div class="product-grid accessories-grid" id="acc-grid"></div>
+    </section>
+
+    <!-- BRANDS -->
+    <section class="view" id="view-brands" hidden>
+      <div class="page-hero">
+        <h1>Brands</h1>
+        <p>Shop a brand to see every model in stock.</p>
+      </div>
+      <div class="brand-grid" id="brand-grid"></div>
+    </section>
+
+    <!-- DEALS -->
+    <section class="view" id="view-deals" hidden>
+      <div class="page-hero">
+        <h1>Deals</h1>
+        <p>Current promotional prices from the store catalog.</p>
+      </div>
+      <div class="product-grid" id="deals-grid"></div>
+    </section>
+
+    <!-- COMPARE -->
+    <section class="view" id="view-compare" hidden>
+      <div class="page-hero">
+        <h1>Compare</h1>
+        <p>Compare up to 3 phones side by side.</p>
+      </div>
+      <div id="compare-table"></div>
+    </section>
+
+    <!-- FIND YOUR PHONE -->
+    <section class="view" id="view-find" hidden>
+      <div class="page-hero">
+        <h1>Find Your Phone</h1>
+        <p>Match phones from the live Nova Mobile catalog.</p>
+      </div>
+      <form class="find-form" id="find-form">
+        <label>Budget
+          <select name="budget">
+            <option value="">Any budget</option>
+            <option value="50000">Under PKR 50,000</option>
+            <option value="80000">Under PKR 80,000</option>
+            <option value="120000">Under PKR 120,000</option>
+            <option value="200000">Under PKR 200,000</option>
+            <option value="400000">Under PKR 400,000</option>
+          </select>
+        </label>
+        <label>Brand
+          <select name="brand" id="find-brand"><option value="">Any brand</option></select>
+        </label>
+        <label>Priority
+          <select name="use">
+            <option value="">No preference</option>
+            <option value="camera">Camera</option>
+            <option value="battery">Battery</option>
+            <option value="flagship">Flagship performance</option>
+            <option value="value">Best value</option>
+          </select>
+        </label>
+        <button class="btn btn-primary" type="submit">Show matches</button>
+      </form>
+      <div class="product-grid" id="find-grid"></div>
+    </section>
+
+    <!-- PRODUCT -->
+    <section class="view" id="view-product" hidden>
+      <div id="product-detail"></div>
+    </section>
+
+    <!-- WISHLIST -->
+    <section class="view" id="view-wishlist" hidden>
+      <div class="page-hero">
+        <h1>Wishlist</h1>
+        <p>Saved phones and accessories on this device.</p>
+      </div>
+      <div class="product-grid" id="wishlist-grid"></div>
+    </section>
+
+    <!-- CART -->
+    <section class="view" id="view-cart" hidden>
+      <div class="page-hero">
+        <h1>Cart</h1>
+        <p>Review your order, then send it on WhatsApp.</p>
+      </div>
+      <div id="cart-page"></div>
+    </section>
+  </main>
+
+  <section class="trust-bar" id="trust-bar"></section>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="index.html">
+          <img src="images/logo/logo.png" alt="" width="36" height="36">
+          <span class="logo-text"><strong>NOVA</strong><small>MOBILE</small></span>
+        </a>
+        <p id="footer-tagline">Premium smartphones and accessories.</p>
+        <p id="footer-address" class="muted"></p>
+      </div>
+      <div>
+        <h3>Shop</h3>
+        <a href="index.html?view=shop">Phones</a>
+        <a href="index.html?view=accessories">Accessories</a>
+        <a href="index.html?view=deals">Deals</a>
+        <a href="index.html?view=brands">Brands</a>
+      </div>
+      <div>
+        <h3>Help</h3>
+        <a href="index.html?view=find">Find Your Phone</a>
+        <a href="index.html?view=compare">Compare</a>
+        <a href="index.html?view=wishlist">Wishlist</a>
+        <a href="index.html?view=cart">Cart</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p id="footer-phone"></p>
+        <p id="footer-hours"></p>
+        <div class="socials" id="footer-socials"></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Nova Mobile. All prices in PKR.</p>
+      <p class="dev-credit">Developer credit: Imran Af</p>
+    </div>
+  </footer>
+
+  <nav class="mobile-nav" aria-label="Mobile">
+    <a href="index.html" data-nav="home">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11l8-7 8 7v9H4z"/></svg>
+      Home
+    </a>
+    <a href="index.html?view=shop" data-nav="shop">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg>
+      Shop
+    </a>
+    <a href="index.html?view=wishlist" data-nav="wishlist">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.4-9.2-8.2C1 9.2 2.2 6 5.4 6c1.8 0 3.1 1 3.8 2.2C10 7 11.3 6 13.1 6c3.2 0 4.4 3.2 2.6 5.8C13.5 15.6 12 20 12 20z"/></svg>
+      Wishlist
+    </a>
+    <a href="index.html?view=compare" data-nav="compare">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 20V8M12 20V4M17 20v-8"/></svg>
+      Compare
+    </a>
+    <button type="button" id="account-btn">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="3.2"/><path d="M5 19c1.4-3 3.8-4.5 7-4.5S17.6 16 19 19"/></svg>
+      Account
+    </button>
+  </nav>
+
+  <aside class="drawer" id="mobile-menu" hidden>
+    <div class="drawer-panel">
+      <div class="drawer-head">
+        <strong>Menu</strong>
+        <button class="icon-btn" data-close="mobile-menu" aria-label="Close">×</button>
+      </div>
+      <form class="header-search drawer-search" id="mobile-search">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+        <input type="search" placeholder="Search phones, brands..." id="mobile-search-input">
+      </form>
+      <nav class="drawer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html?view=shop">Phones</a>
+        <a href="index.html?view=accessories">Accessories</a>
+        <a href="index.html?view=brands">Brands</a>
+        <a href="index.html?view=deals">Deals</a>
+        <a href="index.html?view=compare">Compare</a>
+        <a href="index.html?view=find">Find Your Phone</a>
+      </nav>
+    </div>
+  </aside>
+
+  <aside class="drawer" id="cart-drawer" hidden>
+    <div class="drawer-panel cart-panel">
+      <div class="drawer-head">
+        <strong>Cart</strong>
+        <button class="icon-btn" data-close="cart-drawer" aria-label="Close">×</button>
+      </div>
+      <div id="cart-drawer-body"></div>
+    </div>
+  </aside>
+
+  <aside class="drawer" id="account-drawer" hidden>
+    <div class="drawer-panel">
+      <div class="drawer-head">
+        <strong>Account</strong>
+        <button class="icon-btn" data-close="account-drawer" aria-label="Close">×</button>
+      </div>
+      <nav class="drawer-links">
+        <a href="index.html?view=wishlist">Wishlist</a>
+        <a href="index.html?view=compare">Compare</a>
+        <a href="index.html?view=cart">Cart / Order</a>
+        <button type="button" id="account-theme">Toggle theme</button>
+      </nav>
+    </div>
+  </aside>
+
+  <button class="wa-float" id="wa-float" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M20 11.9A8.1 8.1 0 0 1 6.4 18.7L3.8 20l1.4-2.5A8.1 8.1 0 1 1 20 11.9zm-8 6.4a6.4 6.4 0 1 0-3.2-.86l.18.1-1.86 1.1.5-2 .13-.2A6.4 6.4 0 0 0 12 18.3zm3.55-4.76c-.2-.1-1.16-.57-1.34-.64-.18-.06-.31-.1-.44.1-.13.2-.5.63-.62.76-.11.13-.23.15-.43.05-.2-.1-.84-.31-1.6-.99-.59-.52-.99-1.17-1.1-1.37-.12-.2-.01-.3.09-.4.09-.09.2-.23.3-.35.1-.11.13-.2.2-.33.06-.13.03-.25-.02-.35-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.33h-.38c-.13 0-.34.05-.52.25-.18.2-.68.66-.68 1.62s.7 1.88.8 2.01c.1.13 1.37 2.1 3.32 2.94 1.95.84 1.95.56 2.3.53.35-.03 1.16-.47 1.32-.93.16-.46.16-.85.11-.93-.05-.08-.18-.13-.38-.23z"/></svg>
+    <span>Chat on WhatsApp</span>
+  </button>
+
+  <div class="toast" id="toast" hidden></div>
+<script type="application/json" id="data-phones">[
+  {
+    "id": "iphone-15-pro-max",
+    "brand": "Apple",
+    "brandId": "apple",
+    "name": "iPhone 15 Pro Max",
+    "image": "images/phones/iphone/iphone-15-pro-max.webp",
+    "gallery": [
+      "images/phones/iphone/iphone-15-pro-max.webp"
+    ],
+    "price": 349999,
+    "oldPrice": 389999,
+    "discount": 10,
+    "storage": ["256GB", "512GB", "1TB"],
+    "ram": "8GB",
+    "colors": ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": true,
+    "newArrival": false,
+    "bestSeller": true,
+    "badge": "",
+    "description": "Apple iPhone 15 Pro Max with aerospace-grade titanium, A17 Pro chip, and a 5x Telephoto camera.",
+    "specifications": {
+      "display": "6.7-inch Super Retina XDR OLED, 120Hz",
+      "processor": "Apple A17 Pro",
+      "rearCamera": "48 MP Main + 12 MP Ultra Wide + 12 MP Telephoto (5x)",
+      "frontCamera": "12 MP",
+      "battery": "4441 mAh",
+      "os": "iOS 17",
+      "build": "Titanium frame, Ceramic Shield"
+    }
+  },
+  {
+    "id": "iphone-15-pro",
+    "brand": "Apple",
+    "brandId": "apple",
+    "name": "iPhone 15 Pro",
+    "image": "images/phones/iphone/iphone-15-pro.webp",
+    "gallery": [
+      "images/phones/iphone/iphone-15-pro.webp"
+    ],
+    "price": 319999,
+    "oldPrice": 349999,
+    "discount": 9,
+    "storage": ["128GB", "256GB", "512GB", "1TB"],
+    "ram": "8GB",
+    "colors": ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": true,
+    "newArrival": false,
+    "bestSeller": false,
+    "badge": "",
+    "description": "iPhone 15 Pro in a titanium design with A17 Pro and a pro camera system.",
+    "specifications": {
+      "display": "6.1-inch Super Retina XDR OLED, 120Hz",
+      "processor": "Apple A17 Pro",
+      "rearCamera": "48 MP Main + 12 MP Ultra Wide + 12 MP Telephoto (3x)",
+      "frontCamera": "12 MP",
+      "battery": "3274 mAh",
+      "os": "iOS 17",
+      "build": "Titanium frame, Ceramic Shield"
+    }
+  },
+  {
+    "id": "iphone-15",
+    "brand": "Apple",
+    "brandId": "apple",
+    "name": "iPhone 15",
+    "image": "images/phones/iphone/iphone-15.webp",
+    "gallery": [
+      "images/phones/iphone/iphone-15.webp"
+    ],
+    "price": 299999,
+    "oldPrice": 329999,
+    "discount": 9,
+    "storage": ["128GB", "256GB", "512GB"],
+    "ram": "6GB",
+    "colors": ["Pink", "Blue", "Green", "Yellow", "Black"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": true,
+    "newArrival": false,
+    "bestSeller": true,
+    "badge": "",
+    "description": "iPhone 15 with the 48 MP Main camera, Dynamic Island, and USB-C.",
+    "specifications": {
+      "display": "6.1-inch Super Retina XDR OLED",
+      "processor": "Apple A16 Bionic",
+      "rearCamera": "48 MP Main + 12 MP Ultra Wide",
+      "frontCamera": "12 MP",
+      "battery": "3349 mAh",
+      "os": "iOS 17",
+      "build": "Aluminum, Ceramic Shield, USB-C"
+    }
+  },
+  {
+    "id": "iphone-14",
+    "brand": "Apple",
+    "brandId": "apple",
+    "name": "iPhone 14",
+    "image": "images/phones/iphone/iphone-14.webp",
+    "gallery": [
+      "images/phones/iphone/iphone-14.webp"
+    ],
+    "price": 189999,
+    "oldPrice": 209999,
+    "discount": 10,
+    "storage": ["128GB", "256GB", "512GB"],
+    "ram": "6GB",
+    "colors": ["Midnight", "Starlight", "Blue", "Purple", "Red"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": false,
+    "newArrival": false,
+    "bestSeller": true,
+    "badge": "",
+    "description": "iPhone 14 with a dual-camera system, Crash Detection, and all-day battery life.",
+    "specifications": {
+      "display": "6.1-inch Super Retina XDR OLED",
+      "processor": "Apple A15 Bionic",
+      "rearCamera": "12 MP Main + 12 MP Ultra Wide",
+      "frontCamera": "12 MP",
+      "battery": "3279 mAh",
+      "os": "iOS 16",
+      "build": "Aluminum, Ceramic Shield"
+    }
+  },
+  {
+    "id": "samsung-s24-ultra",
+    "brand": "Samsung",
+    "brandId": "samsung",
+    "name": "Samsung S24 Ultra",
+    "image": "images/phones/samsung/samsung-s24-ultra.webp",
+    "gallery": [
+      "images/phones/samsung/samsung-s24-ultra.webp"
+    ],
+    "price": 224999,
+    "oldPrice": 249999,
+    "discount": 10,
+    "storage": ["256GB", "512GB", "1TB"],
+    "ram": "12GB",
+    "colors": ["Titanium Gray", "Titanium Black", "Titanium Violet", "Titanium Yellow"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": true,
+    "newArrival": false,
+    "bestSeller": true,
+    "badge": "",
+    "description": "Galaxy S24 Ultra with a 200 MP camera, built-in S Pen, titanium frame, and Galaxy AI.",
+    "specifications": {
+      "display": "6.8-inch Dynamic AMOLED 2X, 120Hz, QHD+",
+      "processor": "Snapdragon 8 Gen 3 for Galaxy",
+      "rearCamera": "200 MP + 12 MP Ultra Wide + 10 MP 3x + 50 MP 5x",
+      "frontCamera": "12 MP",
+      "battery": "5000 mAh, 45W",
+      "os": "Android 14, One UI 6.1",
+      "build": "Titanium, Gorilla Armor, S Pen"
+    }
+  },
+  {
+    "id": "samsung-s24",
+    "brand": "Samsung",
+    "brandId": "samsung",
+    "name": "Samsung S24",
+    "image": "images/phones/samsung/samsung-s24.webp",
+    "gallery": [
+      "images/phones/samsung/samsung-s24.webp"
+    ],
+    "price": 179999,
+    "oldPrice": 199999,
+    "discount": 10,
+    "storage": ["128GB", "256GB"],
+    "ram": "8GB",
+    "colors": ["Onyx Black", "Marble Gray", "Cobalt Violet", "Amber Yellow"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": true,
+    "newArrival": false,
+    "bestSeller": false,
+    "badge": "",
+    "description": "Galaxy S24 compact flagship with Galaxy AI and a bright 6.2-inch display.",
+    "specifications": {
+      "display": "6.2-inch Dynamic AMOLED 2X, 120Hz",
+      "processor": "Exynos 2400 / Snapdragon 8 Gen 3 (region)",
+      "rearCamera": "50 MP + 12 MP Ultra Wide + 10 MP Telephoto",
+      "frontCamera": "12 MP",
+      "battery": "4000 mAh, 25W",
+      "os": "Android 14, One UI 6.1",
+      "build": "Armor Aluminum, Gorilla Glass Victus 2"
+    }
+  },
+  {
+    "id": "samsung-a55",
+    "brand": "Samsung",
+    "brandId": "samsung",
+    "name": "Samsung Galaxy A55",
+    "image": "images/phones/samsung/samsung-a55.webp",
+    "gallery": [
+      "images/phones/samsung/samsung-a55.webp"
+    ],
+    "price": 99999,
+    "oldPrice": 109999,
+    "discount": 9,
+    "storage": ["128GB", "256GB"],
+    "ram": "8GB",
+    "colors": ["Awesome Navy", "Awesome Lilac", "Awesome Iceblue", "Awesome Lemon"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": false,
+    "newArrival": true,
+    "bestSeller": true,
+    "badge": "HOT",
+    "description": "Galaxy A55 5G with a Super AMOLED 120Hz display and IP67 protection.",
+    "specifications": {
+      "display": "6.6-inch Super AMOLED, 120Hz",
+      "processor": "Exynos 1480",
+      "rearCamera": "50 MP + 12 MP Ultra Wide + 5 MP Macro",
+      "frontCamera": "32 MP",
+      "battery": "5000 mAh, 25W",
+      "os": "Android 14, One UI 6.1",
+      "build": "Armor Aluminum, IP67"
+    }
+  },
+  {
+    "id": "samsung-a35",
+    "brand": "Samsung",
+    "brandId": "samsung",
+    "name": "Samsung Galaxy A35",
+    "image": "images/phones/samsung/samsung-a35.webp",
+    "gallery": [
+      "images/phones/samsung/samsung-a35.webp"
+    ],
+    "price": 79999,
+    "oldPrice": 87999,
+    "discount": 9,
+    "storage": ["128GB", "256GB"],
+    "ram": "8GB",
+    "colors": ["Awesome Navy", "Awesome Lilac", "Awesome Iceblue", "Awesome Lemon"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": false,
+    "newArrival": true,
+    "bestSeller": false,
+    "badge": "",
+    "description": "Galaxy A35 5G with a 120Hz Super AMOLED screen and a 50 MP OIS camera.",
+    "specifications": {
+      "display": "6.6-inch Super AMOLED, 120Hz",
+      "processor": "Exynos 1380",
+      "rearCamera": "50 MP OIS + 8 MP Ultra Wide + 5 MP Macro",
+      "frontCamera": "13 MP",
+      "battery": "5000 mAh, 25W",
+      "os": "Android 14, One UI 6.1",
+      "build": "Armor Aluminum, IP67"
+    }
+  },
+  {
+    "id": "xiaomi-14",
+    "brand": "Xiaomi",
+    "brandId": "xiaomi",
+    "name": "Xiaomi 14",
+    "image": "images/phones/xiaomi/xiaomi-14.webp",
+    "gallery": [
+      "images/phones/xiaomi/xiaomi-14.webp"
+    ],
+    "price": 199999,
+    "oldPrice": 216999,
+    "discount": 8,
+    "storage": ["256GB", "512GB"],
+    "ram": "12GB",
+    "colors": ["Jade Green", "Black", "White"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": true,
+    "newArrival": false,
+    "bestSeller": true,
+    "badge": "",
+    "description": "Xiaomi 14 compact flagship with Snapdragon 8 Gen 3 and a Leica Summilux camera.",
+    "specifications": {
+      "display": "6.36-inch LTPO AMOLED, 120Hz, 12-bit",
+      "processor": "Snapdragon 8 Gen 3",
+      "rearCamera": "50 MP Leica Main + 50 MP Ultra Wide + 50 MP Telephoto",
+      "frontCamera": "32 MP",
+      "battery": "4610 mAh, 90W wired, 50W wireless",
+      "os": "Android 14, HyperOS",
+      "build": "Aluminum, IP68"
+    }
+  },
+  {
+    "id": "redmi-note-13-pro",
+    "brand": "Xiaomi",
+    "brandId": "xiaomi",
+    "name": "Redmi Note 13 Pro",
+    "image": "images/phones/xiaomi/redmi-note-13-pro.webp",
+    "gallery": [
+      "images/phones/xiaomi/redmi-note-13-pro.webp"
+    ],
+    "price": 64999,
+    "oldPrice": 72999,
+    "discount": 11,
+    "storage": ["256GB", "512GB"],
+    "ram": "8GB",
+    "colors": ["Midnight Black", "Forest Green", "Lavender Purple"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": false,
+    "newArrival": true,
+    "bestSeller": true,
+    "badge": "HOT",
+    "description": "Redmi Note 13 Pro with a 200 MP camera and a 120Hz AMOLED display.",
+    "specifications": {
+      "display": "6.67-inch AMOLED, 120Hz",
+      "processor": "Snapdragon 7s Gen 2",
+      "rearCamera": "200 MP + 8 MP Ultra Wide + 2 MP Macro",
+      "frontCamera": "16 MP",
+      "battery": "5100 mAh, 67W",
+      "os": "Android 13, MIUI / HyperOS",
+      "build": "IP54"
+    }
+  },
+  {
+    "id": "redmi-13",
+    "brand": "Xiaomi",
+    "brandId": "xiaomi",
+    "name": "Redmi 13",
+    "image": "images/phones/xiaomi/redmi-13.webp",
+    "gallery": [
+      "images/phones/xiaomi/redmi-13.webp"
+    ],
+    "price": 39999,
+    "oldPrice": 44999,
+    "discount": 11,
+    "storage": ["128GB", "256GB"],
+    "ram": "8GB",
+    "colors": ["Black", "Pink", "Ocean Blue"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": false,
+    "newArrival": true,
+    "bestSeller": false,
+    "badge": "",
+    "description": "Redmi 13 with a 108 MP camera and a large 5030 mAh battery.",
+    "specifications": {
+      "display": "6.79-inch IPS LCD, 90Hz",
+      "processor": "Helio G91 Ultra",
+      "rearCamera": "108 MP + 2 MP",
+      "frontCamera": "13 MP",
+      "battery": "5030 mAh, 33W",
+      "os": "Android 14, HyperOS",
+      "build": "Plastic"
+    }
+  },
+  {
+    "id": "vivo-x100",
+    "brand": "Vivo",
+    "brandId": "vivo",
+    "name": "Vivo X100",
+    "image": "images/phones/vivo/vivo-x100.webp",
+    "gallery": [
+      "images/phones/vivo/vivo-x100.webp"
+    ],
+    "price": 109999,
+    "oldPrice": 129999,
+    "discount": 15,
+    "storage": ["256GB", "512GB"],
+    "ram": "12GB",
+    "colors": ["Starry Blue", "Asteroid Black"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": true,
+    "newArrival": true,
+    "bestSeller": true,
+    "badge": "NEW",
+    "description": "Vivo X100 with MediaTek Dimensity 9300 and a Zeiss camera system.",
+    "specifications": {
+      "display": "6.78-inch LTPO AMOLED, 120Hz",
+      "processor": "MediaTek Dimensity 9300",
+      "rearCamera": "50 MP Zeiss Main + 50 MP Ultra Wide + 64 MP Telephoto",
+      "frontCamera": "32 MP",
+      "battery": "5000 mAh, 120W",
+      "os": "Android 14, Funtouch OS / OriginOS",
+      "build": "Glass, IP68"
+    }
+  },
+  {
+    "id": "vivo-v30",
+    "brand": "Vivo",
+    "brandId": "vivo",
+    "name": "Vivo V30",
+    "image": "images/phones/vivo/vivo-v30.webp",
+    "gallery": [
+      "images/phones/vivo/vivo-v30.webp"
+    ],
+    "price": 89999,
+    "oldPrice": 99999,
+    "discount": 10,
+    "storage": ["128GB", "256GB", "512GB"],
+    "ram": "8GB",
+    "colors": ["Andaman Blue", "Lush Green", "Peacock Green"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": false,
+    "newArrival": true,
+    "bestSeller": false,
+    "badge": "NEW",
+    "description": "Vivo V30 with a 50 MP Aura Light camera and a slim 3D curved AMOLED display.",
+    "specifications": {
+      "display": "6.78-inch AMOLED, 120Hz",
+      "processor": "Snapdragon 7 Gen 3",
+      "rearCamera": "50 MP OIS + 50 MP Ultra Wide",
+      "frontCamera": "50 MP",
+      "battery": "5000 mAh, 80W",
+      "os": "Android 14, Funtouch OS 14",
+      "build": "Glass"
+    }
+  },
+  {
+    "id": "vivo-y27",
+    "brand": "Vivo",
+    "brandId": "vivo",
+    "name": "Vivo Y27",
+    "image": "images/phones/vivo/vivo-y27.webp",
+    "gallery": [
+      "images/phones/vivo/vivo-y27.webp"
+    ],
+    "price": 44999,
+    "oldPrice": 49999,
+    "discount": 10,
+    "storage": ["128GB", "256GB"],
+    "ram": "6GB",
+    "colors": ["Burgundy Black", "Garden Green"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": false,
+    "newArrival": false,
+    "bestSeller": false,
+    "badge": "",
+    "description": "Vivo Y27 with a 50 MP camera and a 5000 mAh battery.",
+    "specifications": {
+      "display": "6.64-inch IPS LCD, 90Hz",
+      "processor": "Helio G85",
+      "rearCamera": "50 MP + 2 MP",
+      "frontCamera": "8 MP",
+      "battery": "5000 mAh, 44W",
+      "os": "Android 13, Funtouch OS 13",
+      "build": "Plastic"
+    }
+  },
+  {
+    "id": "infinix-note-40-pro",
+    "brand": "Infinix",
+    "brandId": "infinix",
+    "name": "Infinix Note 40 Pro",
+    "image": "images/phones/infinix/infinix-note-40-pro.webp",
+    "gallery": [
+      "images/phones/infinix/infinix-note-40-pro.webp"
+    ],
+    "price": 74999,
+    "oldPrice": 84999,
+    "discount": 12,
+    "storage": ["256GB"],
+    "ram": "8GB",
+    "colors": ["Vintage Green", "Obsidian Black", "Titanium Grey"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": true,
+    "newArrival": true,
+    "bestSeller": true,
+    "badge": "HOT",
+    "description": "Infinix Note 40 Pro with 70W charging, a curved AMOLED display, and a 108 MP camera.",
+    "specifications": {
+      "display": "6.78-inch AMOLED, 120Hz, curved",
+      "processor": "Helio G99 Ultimate",
+      "rearCamera": "108 MP + 2 MP + 2 MP",
+      "frontCamera": "32 MP",
+      "battery": "5000 mAh, 70W wired, 20W wireless",
+      "os": "Android 14, XOS 14",
+      "build": "Glass"
+    }
+  },
+  {
+    "id": "infinix-hot-40",
+    "brand": "Infinix",
+    "brandId": "infinix",
+    "name": "Infinix Hot 40",
+    "image": "images/phones/infinix/infinix-hot-40.webp",
+    "gallery": [
+      "images/phones/infinix/infinix-hot-40.webp"
+    ],
+    "price": 39999,
+    "oldPrice": 44999,
+    "discount": 11,
+    "storage": ["128GB", "256GB"],
+    "ram": "8GB",
+    "colors": ["Starfall Green", "Horizon Gold", "Pallet Silver"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": false,
+    "newArrival": true,
+    "bestSeller": false,
+    "badge": "",
+    "description": "Infinix Hot 40 with a 90Hz display and a 50 MP dual camera.",
+    "specifications": {
+      "display": "6.78-inch IPS LCD, 90Hz",
+      "processor": "Helio G99",
+      "rearCamera": "50 MP + AI lens",
+      "frontCamera": "32 MP",
+      "battery": "5000 mAh, 18W",
+      "os": "Android 13, XOS 13",
+      "build": "Plastic"
+    }
+  },
+  {
+    "id": "infinix-zero-30",
+    "brand": "Infinix",
+    "brandId": "infinix",
+    "name": "Infinix Zero 30",
+    "image": "images/phones/infinix/infinix-zero-30.webp",
+    "gallery": [
+      "images/phones/infinix/infinix-zero-30.webp"
+    ],
+    "price": 69999,
+    "oldPrice": 77999,
+    "discount": 10,
+    "storage": ["256GB"],
+    "ram": "8GB",
+    "colors": ["Rome Green", "Golden Hour", "Fantasy Purple"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": false,
+    "newArrival": false,
+    "bestSeller": false,
+    "badge": "",
+    "description": "Infinix Zero 30 with a 144Hz AMOLED display and 4K 60fps front camera.",
+    "specifications": {
+      "display": "6.78-inch AMOLED, 144Hz",
+      "processor": "Helio G99",
+      "rearCamera": "108 MP OIS + 13 MP Ultra Wide + 2 MP",
+      "frontCamera": "50 MP 4K 60fps",
+      "battery": "5000 mAh, 68W",
+      "os": "Android 13, XOS 13",
+      "build": "Glass"
+    }
+  },
+  {
+    "id": "realme-12-pro-plus",
+    "brand": "Realme",
+    "brandId": "realme",
+    "name": "Realme 12 Pro+",
+    "image": "images/phones/realme/realme-12-pro-plus.webp",
+    "gallery": [
+      "images/phones/realme/realme-12-pro-plus.webp"
+    ],
+    "price": 79999,
+    "oldPrice": 89999,
+    "discount": 11,
+    "storage": ["256GB", "512GB"],
+    "ram": "8GB",
+    "colors": ["Submarine Blue", "Navigator Beige", "Sunset Boulevard"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": true,
+    "newArrival": true,
+    "bestSeller": false,
+    "badge": "",
+    "description": "Realme 12 Pro+ with a 64 MP periscope telephoto and a 120Hz curved AMOLED display.",
+    "specifications": {
+      "display": "6.7-inch AMOLED, 120Hz, curved",
+      "processor": "Snapdragon 7s Gen 2",
+      "rearCamera": "50 MP OIS + 8 MP Ultra Wide + 64 MP Periscope 3x",
+      "frontCamera": "32 MP",
+      "battery": "5000 mAh, 67W",
+      "os": "Android 14, Realme UI 5.0",
+      "build": "Vegan leather / glass"
+    }
+  },
+  {
+    "id": "realme-12-pro",
+    "brand": "Realme",
+    "brandId": "realme",
+    "name": "Realme 12 Pro",
+    "image": "images/phones/realme/realme-12-pro.webp",
+    "gallery": [
+      "images/phones/realme/realme-12-pro.webp"
+    ],
+    "price": 69999,
+    "oldPrice": 77999,
+    "discount": 10,
+    "storage": ["256GB", "512GB"],
+    "ram": "8GB",
+    "colors": ["Submarine Blue", "Navigator Beige"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": true,
+    "newArrival": true,
+    "bestSeller": false,
+    "badge": "",
+    "description": "Realme 12 Pro with a 32 MP portrait telephoto and a 120Hz curved AMOLED display.",
+    "specifications": {
+      "display": "6.7-inch AMOLED, 120Hz, curved",
+      "processor": "Snapdragon 6 Gen 1",
+      "rearCamera": "50 MP OIS + 8 MP Ultra Wide + 32 MP Telephoto 2x",
+      "frontCamera": "16 MP",
+      "battery": "5000 mAh, 67W",
+      "os": "Android 14, Realme UI 5.0",
+      "build": "Vegan leather"
+    }
+  },
+  {
+    "id": "realme-c67",
+    "brand": "Realme",
+    "brandId": "realme",
+    "name": "Realme C67",
+    "image": "images/phones/realme/realme-c67.webp",
+    "gallery": [
+      "images/phones/realme/realme-c67.webp"
+    ],
+    "price": 44999,
+    "oldPrice": 49999,
+    "discount": 10,
+    "storage": ["128GB", "256GB"],
+    "ram": "8GB",
+    "colors": ["Sunny Oasis", "Black Rock"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": false,
+    "newArrival": false,
+    "bestSeller": false,
+    "badge": "",
+    "description": "Realme C67 with a 108 MP camera and a 90Hz display.",
+    "specifications": {
+      "display": "6.72-inch IPS LCD, 90Hz",
+      "processor": "Snapdragon 685",
+      "rearCamera": "108 MP + 2 MP",
+      "frontCamera": "8 MP",
+      "battery": "5000 mAh, 33W",
+      "os": "Android 14, Realme UI 5.0",
+      "build": "Plastic"
+    }
+  },
+  {
+    "id": "oneplus-12r",
+    "brand": "OnePlus",
+    "brandId": "oneplus",
+    "name": "OnePlus 12R",
+    "image": "images/phones/oneplus/oneplus-12r.webp",
+    "gallery": [
+      "images/phones/oneplus/oneplus-12r.webp"
+    ],
+    "price": 139999,
+    "oldPrice": 154999,
+    "discount": 10,
+    "storage": ["128GB", "256GB"],
+    "ram": "8GB",
+    "colors": ["Iron Gray", "Cool Blue"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": true,
+    "newArrival": false,
+    "bestSeller": true,
+    "badge": "",
+    "description": "OnePlus 12R with Snapdragon 8 Gen 2, a 5500 mAh battery, and 100W SUPERVOOC charging.",
+    "specifications": {
+      "display": "6.78-inch AMOLED, 120Hz, 4500 nits peak",
+      "processor": "Snapdragon 8 Gen 2",
+      "rearCamera": "50 MP OIS + 8 MP Ultra Wide + 2 MP Macro",
+      "frontCamera": "16 MP",
+      "battery": "5500 mAh, 100W SUPERVOOC",
+      "os": "Android 14, OxygenOS 14",
+      "build": "Aluminum, IP65"
+    }
+  },
+  {
+    "id": "oneplus-nord-ce3",
+    "brand": "OnePlus",
+    "brandId": "oneplus",
+    "name": "OnePlus Nord CE 3",
+    "image": "images/phones/oneplus/oneplus-nord-ce3.webp",
+    "gallery": [
+      "images/phones/oneplus/oneplus-nord-ce3.webp"
+    ],
+    "price": 79999,
+    "oldPrice": 89999,
+    "discount": 11,
+    "storage": ["128GB", "256GB"],
+    "ram": "8GB",
+    "colors": ["Aqua Surge", "Grey Shimmer"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": false,
+    "newArrival": false,
+    "bestSeller": false,
+    "badge": "",
+    "description": "OnePlus Nord CE 3 with a 120Hz AMOLED display and 80W charging.",
+    "specifications": {
+      "display": "6.7-inch AMOLED, 120Hz",
+      "processor": "Snapdragon 782G",
+      "rearCamera": "50 MP OIS + 8 MP Ultra Wide + 2 MP",
+      "frontCamera": "16 MP",
+      "battery": "5000 mAh, 80W",
+      "os": "Android 13, OxygenOS 13",
+      "build": "Plastic"
+    }
+  },
+  {
+    "id": "nothing-phone-2",
+    "brand": "Nothing",
+    "brandId": "nothing",
+    "name": "Nothing Phone (2)",
+    "image": "images/phones/other/nothing-phone-2.webp",
+    "gallery": [
+      "images/phones/other/nothing-phone-2.webp"
+    ],
+    "price": 129999,
+    "oldPrice": 144999,
+    "discount": 10,
+    "storage": ["128GB", "256GB", "512GB"],
+    "ram": "12GB",
+    "colors": ["White", "Dark Grey"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": true,
+    "newArrival": false,
+    "bestSeller": false,
+    "badge": "",
+    "description": "Nothing Phone (2) with the Glyph Interface, Snapdragon 8+ Gen 1, and a transparent design.",
+    "specifications": {
+      "display": "6.7-inch LTPO OLED, 120Hz",
+      "processor": "Snapdragon 8+ Gen 1",
+      "rearCamera": "50 MP Main OIS + 50 MP Ultra Wide",
+      "frontCamera": "32 MP",
+      "battery": "4700 mAh, 45W, 15W wireless",
+      "os": "Android 13, Nothing OS 2.0",
+      "build": "Aluminum, Glyph Interface"
+    }
+  },
+  {
+    "id": "poco-x6-pro",
+    "brand": "POCO",
+    "brandId": "poco",
+    "name": "POCO X6 Pro",
+    "image": "images/phones/other/poco-x6-pro.webp",
+    "gallery": [
+      "images/phones/other/poco-x6-pro.webp"
+    ],
+    "price": 84999,
+    "oldPrice": 94999,
+    "discount": 11,
+    "storage": ["256GB", "512GB"],
+    "ram": "8GB",
+    "colors": ["Yellow", "Gray", "Black"],
+    "condition": "New",
+    "availability": "In Stock",
+    "featured": true,
+    "newArrival": true,
+    "bestSeller": true,
+    "badge": "HOT",
+    "description": "POCO X6 Pro with Dimensity 8300-Ultra and a 120Hz Flow AMOLED display.",
+    "specifications": {
+      "display": "6.67-inch AMOLED, 120Hz, 1800 nits",
+      "processor": "Dimensity 8300-Ultra",
+      "rearCamera": "64 MP OIS + 8 MP Ultra Wide + 2 MP Macro",
+      "frontCamera": "16 MP",
+      "battery": "5000 mAh, 67W",
+      "os": "Android 14, HyperOS",
+      "build": "IP54"
+    }
+  }
+]</script>
+  <script type="application/json" id="data-accessories">[
+  {
+    "id": "gan-65w-charger",
+    "name": "65W GaN Fast Charger",
+    "category": "Chargers",
+    "image": "images/accessories/gan-65w-charger.webp",
+    "price": 4999,
+    "oldPrice": 6499,
+    "discount": 23,
+    "availability": "In Stock",
+    "featured": true,
+    "description": "Compact 65W GaN wall charger with USB-C output for phones and laptops."
+  },
+  {
+    "id": "20w-usbc-charger",
+    "name": "20W USB-C Fast Charger",
+    "category": "Chargers",
+    "image": "images/accessories/20w-usbc-charger.webp",
+    "price": 1999,
+    "oldPrice": 2499,
+    "discount": 20,
+    "availability": "In Stock",
+    "featured": true,
+    "description": "20W USB-C power adapter for iPhone and Android fast charging."
+  },
+  {
+    "id": "100w-supervooc",
+    "name": "100W SUPERVOOC Charger",
+    "category": "Chargers",
+    "image": "images/accessories/100w-supervooc.webp",
+    "price": 6999,
+    "oldPrice": 8499,
+    "discount": 18,
+    "availability": "In Stock",
+    "featured": false,
+    "description": "100W SUPERVOOC charger compatible with OnePlus and selected VOOC devices."
+  },
+  {
+    "id": "usbc-cable",
+    "name": "USB-C to USB-C Cable 1m",
+    "category": "Cables",
+    "image": "images/accessories/usbc-cable.webp",
+    "price": 999,
+    "oldPrice": 1499,
+    "discount": 33,
+    "availability": "In Stock",
+    "featured": true,
+    "description": "Braided USB-C cable rated for fast charging and data transfer."
+  },
+  {
+    "id": "lightning-cable",
+    "name": "USB-C to Lightning Cable 1m",
+    "category": "Cables",
+    "image": "images/accessories/lightning-cable.webp",
+    "price": 2499,
+    "oldPrice": 3499,
+    "discount": 29,
+    "availability": "In Stock",
+    "featured": false,
+    "description": "USB-C to Lightning cable for iPhone charging and sync."
+  },
+  {
+    "id": "clear-case",
+    "name": "Clear Protective Case",
+    "category": "Cases",
+    "image": "images/accessories/clear-case.webp",
+    "price": 1499,
+    "oldPrice": 1999,
+    "discount": 25,
+    "availability": "In Stock",
+    "featured": true,
+    "description": "Shock-absorbing clear case that shows the original phone design."
+  },
+  {
+    "id": "silicone-case",
+    "name": "Silicone Case",
+    "category": "Cases",
+    "image": "images/accessories/silicone-case.webp",
+    "price": 1799,
+    "oldPrice": 2299,
+    "discount": 22,
+    "availability": "In Stock",
+    "featured": false,
+    "description": "Soft-touch silicone case with a microfiber lining."
+  },
+  {
+    "id": "tempered-glass",
+    "name": "Tempered Glass Screen Protector",
+    "category": "Screen Protectors",
+    "image": "images/accessories/tempered-glass.webp",
+    "price": 799,
+    "oldPrice": 1299,
+    "discount": 38,
+    "availability": "In Stock",
+    "featured": true,
+    "description": "9H tempered glass with an oleophobic coating."
+  },
+  {
+    "id": "tws-earbuds",
+    "name": "Wireless TWS Earbuds",
+    "category": "Audio",
+    "image": "images/accessories/tws-earbuds.webp",
+    "price": 4999,
+    "oldPrice": 6499,
+    "discount": 23,
+    "availability": "In Stock",
+    "featured": true,
+    "description": "True wireless earbuds with a charging case and touch controls."
+  },
+  {
+    "id": "powerbank-20000",
+    "name": "20000mAh Power Bank",
+    "category": "Power Banks",
+    "image": "images/accessories/powerbank-20000.webp",
+    "price": 5499,
+    "oldPrice": 6999,
+    "discount": 21,
+    "availability": "In Stock",
+    "featured": true,
+    "description": "20000mAh power bank with USB-C input and dual output."
+  },
+  {
+    "id": "magsafe-puck",
+    "name": "15W Magnetic Wireless Charger",
+    "category": "Chargers",
+    "image": "images/accessories/magsafe-puck.webp",
+    "price": 3999,
+    "oldPrice": 4999,
+    "discount": 20,
+    "availability": "In Stock",
+    "featured": false,
+    "description": "Magnetic 15W wireless charging puck for MagSafe-compatible iPhones."
+  },
+  {
+    "id": "smartwatch-basic",
+    "name": "Fitness Smartwatch",
+    "category": "Smartwatches",
+    "image": "images/accessories/smartwatch.webp",
+    "price": 7999,
+    "oldPrice": 9999,
+    "discount": 20,
+    "availability": "In Stock",
+    "featured": true,
+    "description": "Fitness smartwatch with heart-rate tracking and message alerts."
+  }
+]</script>
+  <script type="application/json" id="data-brands">[
+  {
+    "id": "apple",
+    "name": "Apple",
+    "logo": "images/brands/apple.svg",
+    "models": 0
+  },
+  {
+    "id": "samsung",
+    "name": "Samsung",
+    "logo": "images/brands/samsung.svg",
+    "models": 0
+  },
+  {
+    "id": "xiaomi",
+    "name": "Xiaomi",
+    "logo": "images/brands/xiaomi.svg",
+    "models": 0
+  },
+  {
+    "id": "vivo",
+    "name": "Vivo",
+    "logo": "images/brands/vivo.svg",
+    "models": 0
+  },
+  {
+    "id": "infinix",
+    "name": "Infinix",
+    "logo": "images/brands/infinix.svg",
+    "models": 0
+  },
+  {
+    "id": "realme",
+    "name": "Realme",
+    "logo": "images/brands/realme.svg",
+    "models": 0
+  },
+  {
+    "id": "oneplus",
+    "name": "OnePlus",
+    "logo": "images/brands/oneplus.svg",
+    "models": 0
+  },
+  {
+    "id": "poco",
+    "name": "POCO",
+    "logo": "images/brands/poco.svg",
+    "models": 0
+  },
+  {
+    "id": "nothing",
+    "name": "Nothing",
+    "logo": "images/brands/nothing.svg",
+    "models": 0
+  }
+]</script>
+  <script type="application/json" id="data-categories">[
+  {
+    "id": "smartphones",
+    "name": "Smartphones",
+    "image": "images/categories/smartphones.webp"
+  },
+  {
+    "id": "chargers",
+    "name": "Chargers",
+    "image": "images/categories/chargers.webp"
+  },
+  {
+    "id": "cables",
+    "name": "Cables",
+    "image": "images/categories/cables.webp"
+  },
+  {
+    "id": "cases",
+    "name": "Cases",
+    "image": "images/categories/cases.webp"
+  },
+  {
+    "id": "screen-protectors",
+    "name": "Screen Protectors",
+    "image": "images/categories/screen-protectors.webp"
+  },
+  {
+    "id": "audio",
+    "name": "Audio",
+    "image": "images/categories/audio.webp"
+  },
+  {
+    "id": "power-banks",
+    "name": "Power Banks",
+    "image": "images/categories/power-banks.webp"
+  },
+  {
+    "id": "smartwatches",
+    "name": "Smartwatches",
+    "image": "images/categories/smartwatches.webp"
+  }
+]</script>
+  <script type="application/json" id="data-deals">[
+  {
+    "productId": "iphone-15-pro-max",
+    "title": "Titanium Week",
+    "discount": 10,
+    "featured": true
+  },
+  {
+    "productId": "samsung-s24-ultra",
+    "title": "Flagship Deal",
+    "discount": 10,
+    "featured": true
+  },
+  {
+    "productId": "vivo-x100",
+    "title": "Deal of the Day",
+    "discount": 15,
+    "featured": true
+  },
+  {
+    "productId": "infinix-note-40-pro",
+    "title": "Hot Price",
+    "discount": 12,
+    "featured": true
+  },
+  {
+    "productId": "xiaomi-14",
+    "title": "Leica Special",
+    "discount": 8,
+    "featured": false
+  },
+  {
+    "productId": "iphone-15",
+    "title": "iPhone Offer",
+    "discount": 9,
+    "featured": false
+  }
+]</script>
+  <script type="application/json" id="data-settings">{
+  "storeName": "Nova Mobile",
+  "tagline": "Pakistan's premium smartphone store",
+  "logo": "images/logo/logo.png",
+  "whatsapp": "",
+  "phone": "",
+  "email": "",
+  "address": "",
+  "city": "",
+  "currency": "PKR",
+  "currencySymbol": "PKR",
+  "openingHours": "",
+  "social": {
+    "facebook": "",
+    "instagram": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "trust": [
+    {
+      "id": "authentic",
+      "title": "100% Authentic",
+      "text": "Official products with warranty"
+    },
+    {
+      "id": "price",
+      "title": "Best Price Guarantee",
+      "text": "We match the best prices"
+    },
+    {
+      "id": "return",
+      "title": "7 Days Return",
+      "text": "Hassle free return policy"
+    },
+    {
+      "id": "delivery",
+      "title": "Express Delivery",
+      "text": "Fast delivery across Pakistan"
+    },
+    {
+      "id": "secure",
+      "title": "Secure Shopping",
+      "text": "Your data is always safe"
+    }
+  ],
+  "hero": [
+    {
+      "id": "hero-1",
+      "productId": "iphone-15-pro-max",
+      "eyebrow": "iPhone 15 Pro Max",
+      "title": "Titanium.",
+      "subtitle": "So strong. So light.",
+      "text": "The most powerful iPhone ever. Built with titanium. Designed for the future.",
+      "image": "images/hero/hero-1.webp",
+      "align": "left"
+    },
+    {
+      "id": "hero-2",
+      "productId": "samsung-s24-ultra",
+      "eyebrow": "Galaxy S24 Ultra",
+      "title": "Galaxy AI.",
+      "subtitle": "Epic, in every way.",
+      "text": "200 MP camera, built-in S Pen, and titanium frame. The most powerful Galaxy yet.",
+      "image": "images/hero/hero-2.webp",
+      "align": "left"
+    },
+    {
+      "id": "hero-3",
+      "productId": "xiaomi-14",
+      "eyebrow": "Xiaomi 14",
+      "title": "Leica Summilux.",
+      "subtitle": "Light, mastered.",
+      "text": "Flagship Snapdragon power with a Leica optical system in a compact titanium body.",
+      "image": "images/hero/hero-3.webp",
+      "align": "left"
+    },
+    {
+      "id": "hero-4",
+      "productId": "vivo-x100",
+      "eyebrow": "Vivo X100",
+      "title": "Zeiss portrait.",
+      "subtitle": "Night, rewritten.",
+      "text": "Dimensity 9300 and a Zeiss camera system built for portraits after dark.",
+      "image": "images/hero/hero-4.webp",
+      "align": "left"
+    }
+  ]
+}</script>
+    <script src="app.js"></script>
+</body>
+</html>

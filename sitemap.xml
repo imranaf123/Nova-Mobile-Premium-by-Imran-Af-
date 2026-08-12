@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>index.html</loc></url>
+  <url><loc>index.html?view=shop</loc></url>
+  <url><loc>index.html?view=accessories</loc></url>
+  <url><loc>index.html?view=brands</loc></url>
+  <url><loc>index.html?view=deals</loc></url>
+  <url><loc>index.html?view=compare</loc></url>
+  <url><loc>index.html?view=find</loc></url>
+  <url><loc>index.html?brand=apple</loc></url>
+  <url><loc>index.html?brand=samsung</loc></url>
+  <url><loc>index.html?brand=xiaomi</loc></url>
+  <url><loc>index.html?brand=vivo</loc></url>
+  <url><loc>index.html?brand=infinix</loc></url>
+  <url><loc>index.html?brand=realme</loc></url>
+  <url><loc>index.html?brand=oneplus</loc></url>
+  <url><loc>index.html?brand=poco</loc></url>
+</urlset>
