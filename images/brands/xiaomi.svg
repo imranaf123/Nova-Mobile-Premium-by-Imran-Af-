@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" role="img" aria-label="Xiaomi">
+  <rect x="2" y="6" width="28" height="28" rx="6" fill="#FF6900"/>
+  <path d="M9 14h5.2v12.6H9V14zm7.4 0H24c2.6 0 4.2 1.5 4.2 3.9v8.7h-5.2v-7.6c0-.7-.4-1.1-1.1-1.1h-5.5V14z" fill="#fff"/>
+  <text x="40" y="27" fill="#FF6900" font-family="Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="0.4">Xiaomi</text>
+</svg>
