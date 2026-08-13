@@ -1,18 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>index.html</loc></url>
-  <url><loc>index.html?view=shop</loc></url>
-  <url><loc>index.html?view=accessories</loc></url>
-  <url><loc>index.html?view=brands</loc></url>
-  <url><loc>index.html?view=deals</loc></url>
-  <url><loc>index.html?view=compare</loc></url>
-  <url><loc>index.html?view=find</loc></url>
-  <url><loc>index.html?brand=apple</loc></url>
-  <url><loc>index.html?brand=samsung</loc></url>
-  <url><loc>index.html?brand=xiaomi</loc></url>
-  <url><loc>index.html?brand=vivo</loc></url>
-  <url><loc>index.html?brand=infinix</loc></url>
-  <url><loc>index.html?brand=realme</loc></url>
-  <url><loc>index.html?brand=oneplus</loc></url>
-  <url><loc>index.html?brand=poco</loc></url>
+
+  <url>
+    <loc>https://nova-mobile-by-imran-af.vercel.app/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://nova-mobile-by-imran-af.vercel.app/pages/catalog.html</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://nova-mobile-by-imran-af.vercel.app/pages/catalog.html?category=smartphones</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://nova-mobile-by-imran-af.vercel.app/pages/catalog.html?category=used-phones</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nova-mobile-by-imran-af.vercel.app/pages/catalog.html?category=accessories</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nova-mobile-by-imran-af.vercel.app/pages/catalog.html?brand=apple</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nova-mobile-by-imran-af.vercel.app/pages/catalog.html?brand=samsung</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nova-mobile-by-imran-af.vercel.app/pages/catalog.html?brand=xiaomi</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nova-mobile-by-imran-af.vercel.app/pages/catalog.html?brand=vivo</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nova-mobile-by-imran-af.vercel.app/pages/catalog.html?brand=infinix</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nova-mobile-by-imran-af.vercel.app/pages/catalog.html?brand=realme</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nova-mobile-by-imran-af.vercel.app/pages/catalog.html?brand=oneplus</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nova-mobile-by-imran-af.vercel.app/pages/catalog.html?brand=poco</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
