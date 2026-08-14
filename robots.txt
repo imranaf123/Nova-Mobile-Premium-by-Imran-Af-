@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://imranaf123.github.io/Nova-Mobile-by-Imran-Af/sitemap.xml
+Sitemap: https://nova-mobile-premium-by-imran-af.vercel.app/sitemap.xml
